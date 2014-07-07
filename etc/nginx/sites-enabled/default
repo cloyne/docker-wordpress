@@ -9,12 +9,19 @@ server {
         try_files $uri $uri/ /index.php?q=$uri&$args;
     }
 
-    location ~ \.php$ {
-        try_files $uri =404;
-        include fastcgi_php;
+    # Do not serve PHP files from uploads directory
+    location /wp-content/uploads {
+        location ~ \.php$ {
+            return 403;
+        }
     }
 
     location ~ /\. {
        return 403;
+    }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        include fastcgi_php;
     }
 }
