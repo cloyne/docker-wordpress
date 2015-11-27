@@ -17,7 +17,7 @@ server {
     }
 
     location ~ /\. {
-       return 403;
+        return 403;
     }
 
     location ~ \.php$ {
