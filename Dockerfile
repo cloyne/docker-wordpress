@@ -1,6 +1,4 @@
-FROM cloyne/php
-
-MAINTAINER Mitar <mitar.docker@tnode.com>
+FROM tozd/php:5.5
 
 COPY ./wordpress /wordpress
 
