@@ -6,7 +6,8 @@ How to Upgrade Wordpress
 2. Copy the commit hash
 3. `git submodule update --init`
 4. `cd wordpress`
-5. `git checkout ` the commit hash
-6. `cd ..`
-7. `git add wordpress`
-8. `git commit -m "Updated WordPress to x.x.x"`
+5. `git fetch --all --tags --prune`
+6. `git checkout ` the commit hash
+7. `cd ..`
+8. `git add wordpress`
+9. `git commit -m "Updated WordPress to x.x.x"`
